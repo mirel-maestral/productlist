@@ -2,6 +2,7 @@
 ### Sample Product List built with React and .net core
 
 **api** listens on 5001 port
+
 **client** app listens on 3000 port
 
 ##### Navigate to the api subfolder and execute CLI commands:
