@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProductList.Repositories\ProductList.Repositories.csproj" />
+    <ProjectReference Include="..\ProductList.Business.Model\ProductList.Business.Model.csproj" />
+    <ProjectReference Include="..\ProductList.Bisiness\ProductList.Business.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="log4net.config">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
